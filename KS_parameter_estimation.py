@@ -14,7 +14,7 @@ if __name__ == "__main__":
 	#See if the data assimilation works
 	true = KS()
 	assimilator = KSAssim(fourier_projector, mu=1, diffusion=3, update_params=True)
-	max_n = 200
+	max_n = 100
 	for n in range(max_n):
 		target = fourier_projector(true.xspec)
 		assimilator.set_target(target)
